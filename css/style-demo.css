@@ -1,0 +1,65 @@
+/*
+* @Author: asusaa
+* @Date:   2018-07-30 14:35:57
+* @Last Modified by:   asusaa
+* @Last Modified time: 2018-08-09 11:33:47
+*/
+.box,.box2,.box3,.box4{
+	width: 200px;
+	height: 200px;
+	background: blue;
+}
+
+.box:hover{
+	/* 转换：平移（水平平移距离，垂直移动距离） 向下向右为正。 */
+	transform: translate(20px, 20px);
+	/* 水平移动的距离 */
+	transform: translateX(20px);
+	/* 垂直移动的距离 */
+	transform: translateY(20px);
+		/* 过度 ：需要过度的样式名称 过度时间 */
+		transition: transform .5s;
+		/* 需要过度的样式名称 */
+		transition-property: transform;
+		/* 过度所用的时间 */
+		transition-duration: .5s;
+		/* 过度的速度曲线：linear匀速 /ease-in 先慢后快 /贝塞尔曲线*/
+		transition-timing-function:ease-in-out;
+		 /* 过度延迟时间 */
+		transition-delay: 1s;
+
+}
+
+
+.box2:hover{
+	/* 转换：旋转 顺时针是正值，逆时针是负值*/
+	transform: rotate(45deg);
+}
+.box3:hover{
+	/* 转化：缩放 >1 放大 / <1 缩小 按倍数 */
+	transform: scale(1.2,1.2);
+	/* 水平缩放 */
+	transform: scaleY(1.7);
+	/* 垂直缩放 */
+	transform: scaleX(2);
+
+
+}
+.box4:hover{
+	/* 转换：斜切 水平斜切角度  垂直斜切角度  */
+	transform: skew(15deg, 15deg);
+	transform: skewX(15deg);
+	transform: skewY(15deg);
+}
+/* 鼠标移入父级元素 让子级元素如何变化 */
+.box1:hover .son{
+	background: linear-gradient(to right,red 50%,yellow,orange);
+		
+	/* 镜像渐变 */
+	background: radial-gradient(250,112,199,0.5);
+}
+
+
+
+
+
